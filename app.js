@@ -177,10 +177,8 @@ function checkTodo(id) {
   setTODOS();
 
   if (update_todo_item.completed) {
-    // console.log("Completed todo");
     document.getElementById(id).classList.add("completed");
   } else {
-    // console.log("Uncompleted todo");
     document.getElementById(id).classList.remove("completed");
   }
 
@@ -205,8 +203,6 @@ todo_form.addEventListener("submit", (e) => {
 todo_container.addEventListener("click", (e) => {
   const item = e.target;
   const id = e.target.parentElement.parentElement.id;
-
-  console.log(item);
 
   if (item.classList[0] === "remove") {
     deleteTodo(id);
